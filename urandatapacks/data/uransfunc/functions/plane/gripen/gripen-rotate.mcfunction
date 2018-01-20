@@ -1,8 +1,8 @@
 #gripen-rotate（選択スロット）に応じてXYZ回転
-execute if entity @s[scores={gripen-rotate=1}] run scoreboard players remove @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 5
-execute if entity @s[scores={gripen-rotate=1}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~-5 ~
-execute if entity @s[scores={gripen-rotate=3}] run scoreboard players add @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 5
-execute if entity @s[scores={gripen-rotate=3}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~5 ~
+execute if entity @s[scores={gripen-rotate=1}] run scoreboard players remove @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 2
+execute if entity @s[scores={gripen-rotate=1}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~-2 ~
+execute if entity @s[scores={gripen-rotate=3}] run scoreboard players add @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 2
+execute if entity @s[scores={gripen-rotate=3}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~2 ~
 execute if entity @s[scores={gripen-rotate=2}] run scoreboard players add @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngX 3
 execute if entity @s[scores={gripen-rotate=8}] run scoreboard players remove @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngX 3
 execute if entity @s[scores={gripen-rotate=4}] run scoreboard players add @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngZ 5

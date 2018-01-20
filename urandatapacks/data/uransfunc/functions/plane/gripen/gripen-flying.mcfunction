@@ -27,10 +27,11 @@ scoreboard players set @s[nbt={SelectedItemSlot:5}] gripen-rotate 6
 scoreboard players set @s[nbt={SelectedItemSlot:6}] gripen-rotate 7
 scoreboard players set @s[nbt={SelectedItemSlot:8}] gripen-rotate 9
 
-#execute as @s[scores={gripen-toggleG=1}] run function uransfunc:plane/gripen/gripen-gear
-
 #gripen-rotateが1以上（操作スロット選択時）旋回・加減速
 execute as @s[scores={gripen-rotate=1..}] run function uransfunc:plane/gripen/gripen-rotate
+
+#Lockonタグがついてる場合ロックオン実行
+execute as @s[tag=gripen-lockon] run function uransfunc:plane/gripen/weapon/gripen-aam-lockon
 
 #1ブロック下が空気以外なら着陸モードへ
 execute as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,scores={speed=..99}] at @s unless block ~ ~-1 ~ minecraft:air run function uransfunc:plane/gripen/gripen-landing

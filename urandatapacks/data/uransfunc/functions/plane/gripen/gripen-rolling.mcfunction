@@ -3,16 +3,16 @@ execute if entity @s[nbt={SelectedItemSlot:8}] run scoreboard players add @e[tag
 execute if entity @s[nbt={SelectedItemSlot:6}] run scoreboard players remove @e[tag=gripen-root,limit=1,sort=nearest,distance=..10,tag=!flying,scores={speed=1..200}] speed 1
 
 #スロット0選択で左旋回，2で右旋回
-execute if entity @s[nbt={SelectedItemSlot:0}] run scoreboard players remove @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 2
-execute if entity @s[nbt={SelectedItemSlot:0}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~-2 ~
-execute if entity @s[nbt={SelectedItemSlot:2}] run scoreboard players add @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 2
-execute if entity @s[nbt={SelectedItemSlot:2}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~2 ~
+execute if entity @s[nbt={SelectedItemSlot:0}] run scoreboard players remove @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 1
+execute if entity @s[nbt={SelectedItemSlot:0}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~-1 ~
+execute if entity @s[nbt={SelectedItemSlot:2}] run scoreboard players add @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] AngY 1
+execute if entity @s[nbt={SelectedItemSlot:2}] as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] at @s run tp @s ~ ~ ~ ~1 ~
 
 #ヨー，ロールを0に
-scoreboard players set @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying] AngX 180
-scoreboard players set @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying] AngZ 180
-scoreboard players set @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying,scores={AngX=-90..90}] AngX 0
-scoreboard players set @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying,scores={AngX=-90..90}] AngZ 0
+execute as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying] if entity @s[scores={AngX=-90..90}] run scoreboard players set @s AngX 0
+execute as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying] if entity @s[scores={AngX=-90..90}] run scoreboard players set @s AngZ 0
+execute as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying] unless entity @s[scores={AngX=-90..90}] run scoreboard players set @s AngX 180
+execute as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5,tag=!flying] unless entity @s[scores={AngX=-90..90}] run scoreboard players set @s AngZ 180
 
 #ベクトル計算
 execute as @e[tag=gripen-root,limit=1,sort=nearest,distance=..5] run function uransfunc:plane/gripen/gripen-move
