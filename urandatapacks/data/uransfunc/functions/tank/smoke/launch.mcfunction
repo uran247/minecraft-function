@@ -1,0 +1,10 @@
+execute @s[score_sin_min=-100,score_sin=-55] ~ ~ ~ function tank:gun/moveXA
+execute @s[score_sin_min=-54,score_sin=-5] ~ ~ ~ function tank:gun/moveXB
+execute @s[score_sin_min=5,score_sin=54] ~ ~ ~ function tank:gun/moveXC
+execute @s[score_sin_min=55,score_sin=100] ~ ~ ~ function tank:gun/moveXD
+execute @s[score_sinY_min=-20,score_sinY=12] ~ ~ ~ function tank:gun/moveYA
+execute @s[score_sinY_min=13,score_sinY=34] ~ ~ ~ function tank:gun/moveYB
+execute @s[score_cos_min=-100,score_cos=-55] ~ ~ ~ function tank:gun/moveZA
+execute @s[score_cos_min=-54,score_cos=-5] ~ ~ ~ function tank:gun/moveZB
+execute @s[score_cos_min=5,score_cos=54] ~ ~ ~ function tank:gun/moveZC
+execute @s[score_cos_min=55,score_cos=100] ~ ~ ~ function tank:gun/moveZD

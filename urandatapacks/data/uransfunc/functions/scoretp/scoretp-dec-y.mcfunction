@@ -1,0 +1,19 @@
+execute as @s[scores={scoretp-dec-y=-1}] run tp @s ^ ^-0.1 ^
+execute as @s[scores={scoretp-dec-y=-2}] run tp @s ^ ^-0.2 ^
+execute as @s[scores={scoretp-dec-y=-3}] run tp @s ^ ^-0.3 ^
+execute as @s[scores={scoretp-dec-y=-4}] run tp @s ^ ^-0.4 ^
+execute as @s[scores={scoretp-dec-y=-5}] run tp @s ^ ^-0.5 ^
+execute as @s[scores={scoretp-dec-y=-6}] run tp @s ^ ^-0.6 ^
+execute as @s[scores={scoretp-dec-y=-7}] run tp @s ^ ^-0.7 ^
+execute as @s[scores={scoretp-dec-y=-8}] run tp @s ^ ^-0.8 ^
+execute as @s[scores={scoretp-dec-y=-9}] run tp @s ^ ^-0.9 ^
+
+execute as @s[scores={scoretp-dec-y=1}] run tp @s ^ ^0.1 ^
+execute as @s[scores={scoretp-dec-y=2}] run tp @s ^ ^0.2 ^
+execute as @s[scores={scoretp-dec-y=3}] run tp @s ^ ^0.3 ^
+execute as @s[scores={scoretp-dec-y=4}] run tp @s ^ ^0.4 ^
+execute as @s[scores={scoretp-dec-y=5}] run tp @s ^ ^0.5 ^
+execute as @s[scores={scoretp-dec-y=6}] run tp @s ^ ^0.6 ^
+execute as @s[scores={scoretp-dec-y=7}] run tp @s ^ ^0.7 ^
+execute as @s[scores={scoretp-dec-y=8}] run tp @s ^ ^0.8 ^
+execute as @s[scores={scoretp-dec-y=9}] run tp @s ^ ^0.9 ^

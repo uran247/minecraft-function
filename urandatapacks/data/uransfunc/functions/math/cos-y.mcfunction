@@ -1,0 +1,11 @@
+scoreboard players operation @s reg1 = @s AngX
+scoreboard players operation @s[scores={AngX=91..180}] reg1 -= #180 Num
+scoreboard players operation @s[scores={AngX=-180..-91}] reg1 += #180 Num
+scoreboard players operation @s reg1 *= @s reg1
+scoreboard players operation @s cosY = @s reg1
+scoreboard players operation @s reg1 += #32400 Num
+scoreboard players operation @s cosY *= #-400 Num
+scoreboard players operation @s cosY += #3240000 Num
+scoreboard players operation @s cosY /= @s reg1
+scoreboard players operation @s[scores={AngX=91..180}] cosY *= #-1 Num
+scoreboard players operation @s[scores={AngX=-180..-91}] cosY *= #-1 Num
